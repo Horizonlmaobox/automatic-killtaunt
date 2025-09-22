@@ -83,7 +83,7 @@ callbacks.Register("CreateMove", "AutoTauntInput", function(cmd)
     if input.IsButtonDown(KEY_UP) then state.delay = math.min(5, math.floor((state.delay + 0.1) * 10 + 0.5) / 10) end
     if input.IsButtonDown(KEY_DOWN) then state.delay = math.max(0, math.floor((state.delay - 0.1) * 10 + 0.5) / 10) end
     if input.IsButtonDown(KEY_PAGEUP) then state.taunt_slot = math.min(8, state.taunt_slot + 1) end
-    if input.IsButtonDown(KEY_PAGEDOWN) then state.taunt_slot = math.max(1, state.taunt_slot - 1) end
+    if input.IsButtonDown(KEY_PAGEDOWN) then state.taunt_slot = math.max(0, state.taunt_slot - 1) end
     if input.IsButtonDown(KEY_ENTER) then
         local t = globals.RealTime()
         if t - lastKeyToggle > 0.2 then
